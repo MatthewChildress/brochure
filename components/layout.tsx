@@ -1,15 +1,16 @@
 import { NextPage } from "next";
-import Header from "./header";
 import Footer from "./footer";
 import Seo from "./seo";
+import styled from "styled-components";
 
-const Layout: NextPage = () => {
+const LayoutContainer = styled.main``
+
+const Layout: NextPage = (props: any) => {
 	return (
 		<>
 			<Seo />
-			<Header />
 			<div>
-				<main></main>
+				<main>{props.children}</main>
 			</div>
 			<Footer />
 		</>
